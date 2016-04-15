@@ -48,7 +48,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3">
-                                <a class="logo" href="#">
+                                <a class="logo" href="{{ path('freelance_homepage') }}">
                                                                 <h4 class="text-color">Freelance</h4>
 
                                 </a>
@@ -126,7 +126,7 @@
                                     
                                     <li><a href="#">TROUVER UN FREELANCE</a>
                                         <ul>
-                                            <li><a href="#">Publier un projet</a>
+                                            <li><a href="{{ path('project_new') }}">Publier un projet</a>
                                             </li>
                                             
                                         </ul>
@@ -143,7 +143,7 @@
                             </li>
                             <li><a href="#">Travailler</a>
                                 <ul>
-                                    <li><a href="#">Parcourir le projets</a>
+                                    <li><a href="{{ path('project') }}">Parcourir le projets</a>
                                     </li>
                                     <li><a href="#">Voir les catégories</a>
                                     </li>
@@ -154,7 +154,7 @@
                             </li>
                             <li><a href="#">Commet cela fonctionne-t-il</a>
                             </li>
-                            <li type="button" class="btn btn-primary btn-xs" ><a href="#">Publier un projet</a>
+                            <li type="button" class="btn btn-primary btn-xs" ><a href="{{ path('project_new') }}">Publier un projet</a>
                             
                             </li>
                             
