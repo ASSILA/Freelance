@@ -1,0 +1,43 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="container">
+<div class="fos_user_user_show">
+    
+     <div class="container">
+            <h1 class="page-title">Freelance Profile</h1>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <aside class="user-profile-sidebar">
+                        <div class="user-profile-avatar text-center">
+                            <h5><p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p></h5>
+                            <p>Member Since May 2012</p>
+                        </div>
+                        <ul class="list user-profile-nav">
+                            <li><a href="user-profile.html"><i class="fa fa-user"></i>Overview</a>
+                            </li>
+                            <li><a href="user-profile-settings.html"><i class="fa fa-cog"></i>Settings</a>
+                            </li>
+                            <li><a href="user-profile-photos.html"><i class="fa fa-camera"></i>My Travel Photos</a>
+                            </li>
+                            <li><a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>Booking History</a>
+                            </li>
+                            <li><a href="user-profile-cards.html"><i class="fa fa-credit-card"></i>Credit/Debit Cards</a>
+                            </li>
+                            <li><a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>Wishlist</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+</div>

@@ -1,0 +1,30 @@
+candidate:
+    path:     /
+    defaults: { _controller: "freelanceBundle:Candidate:index" }
+
+candidate_show:
+    path:     /{id}/show
+    defaults: { _controller: "freelanceBundle:Candidate:show" }
+
+candidate_new:
+    path:     /new
+    defaults: { _controller: "freelanceBundle:Candidate:new" }
+
+candidate_create:
+    path:     /create
+    defaults: { _controller: "freelanceBundle:Candidate:create" }
+    methods:  POST
+
+candidate_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "freelanceBundle:Candidate:edit" }
+
+candidate_update:
+    path:     /{id}/update
+    defaults: { _controller: "freelanceBundle:Candidate:update" }
+    methods:  [POST, PUT]
+
+candidate_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "freelanceBundle:Candidate:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,37 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block fos_user_content %}
+    <div class="home">
+        <div class="register-logo  animated-item-1  bg-blue-gradient">
+            <a href="{{ path('freelancer_main_acceuil') }}"><b>Acceuil</b></a>
+        </div>
+    </div>
+    <div class="register-page ">
+        <div class="register-box">
+            <div class="register-logo  animated-item-1  bg-blue-gradient">
+                <a href="{{ path('freelancer_registration') }}"><b>Freelancer</b> Inscription</a>
+            </div>
+        </div>
+    </div>
+    <div class="register-page">
+        <div class="register-box">
+            <div class="register-logo bg-black">
+                <a href="{{ path('jobowner_registration') }}"><b>Jobowner</b> Inscription</a>
+            </div>
+        </div>
+    </div>
+    <div class="register-page">
+        <div class="register-box">
+            <div class="register-logo bg-red-gradient">
+                <a href="{{ path('admin_registration') }}"><b>Admin</b> Inscription</a>
+            </div>
+        </div>
+    </div>
+    <div class="register-page">
+        <div class="register-box">
+            <div class="register-logo bg-green-gradient">
+                <a href="{{ path('fos_user_security_login') }}"><b>Connexion</b>...</a>
+            </div>
+        </div>
+    </div>
+{% endblock fos_user_content %}

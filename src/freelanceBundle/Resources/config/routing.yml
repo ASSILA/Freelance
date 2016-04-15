@@ -1,0 +1,19 @@
+freelance_candidate:
+    resource: "@freelanceBundle/Resources/config/routing/candidate.yml"
+    prefix:   /candidate
+
+freelance_project:
+    resource: "@freelanceBundle/Resources/config/routing/project.yml"
+    prefix:   /project
+
+freelance_homepage:
+    path:     /
+    defaults: { _controller: freelanceBundle:Default:index }
+    
+freelancer_registration:
+    pattern:  /register/freelancer
+    defaults: { _controller: freelanceBundle:RegistrationFreelancer:register }
+
+jobowner_registration:
+    pattern:  /register/jobowner
+    defaults: { _controller: freelanceBundle:RegistrationJobowner:register }

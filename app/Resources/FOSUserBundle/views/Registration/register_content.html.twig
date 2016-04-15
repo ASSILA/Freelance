@@ -1,0 +1,56 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% block user %}{% endblock %}
+{% block fos_user_content %}
+
+    <div class="register-page">
+        <div class="register-box">
+            <div class="register-logo">
+                <a href="{{ path('fos_user_registration_register') }}"></a>
+            </div>
+
+            <div class="register-box-body">
+                <p class="login-box-msg"><h3 class="mb15">Sign up for free</h3></p>
+                <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST">
+                    {{ form_errors(form) }}
+                    <div class="form-group has-feedback">
+                        {{ form_widget(form.username,{ 'attr': {'class': 'form-control','placeholder':'security.login.username'|trans } }) }}
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        {{ form_errors(form.username) }}
+                    </div>
+                    <div class="form-group has-feedback">
+                        {{ form_widget(form.firstname,{ 'attr': {'class': 'form-control','placeholder':'Nom'|trans } }) }}
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        {{ form_errors(form.firstname) }}
+                    </div>
+                    <div class="form-group has-feedback">
+                        {{ form_widget(form.lastname,{ 'attr': {'class': 'form-control','placeholder':'Prenom'|trans } }) }}
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        {{ form_errors(form.lastname) }}
+                    </div>
+                    <div class="form-group has-feedback">
+                        {{ form_widget(form.email,{ 'attr': {'class': 'form-control','placeholder':'email:'|trans } }) }}
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        {{ form_errors(form.email) }}
+                    </div>
+                    <div class="form-group has-feedback">
+                        {{ form_widget(form.plainPassword.first,{ 'attr': {'class': 'form-control','placeholder':'security.login.password'|trans } }) }}
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        {{ form_errors(form.plainPassword.first) }}
+                    </div>
+                    <div class="form-group has-feedback">
+                        {{ form_widget(form.plainPassword.second,{ 'attr': {'class': 'form-control','placeholder':'security.login.password'|trans } }) }}
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        {{ form_errors(form.plainPassword.second) }}
+                    </div> 
+                 
+            </div>   
+            {{ form_rest(form) }}
+            <div>
+                <input type="submit" id="_submit" name="_submit" class="btn btn-primary btn-block btn-flat" value="{{ 'registration.submit'|trans }}" />
+            </div>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+{% endblock fos_user_content %}
